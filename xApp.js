@@ -61,4 +61,4 @@
             }
         });
     }
-})(this, appName);
+})(this, yourAppName);
