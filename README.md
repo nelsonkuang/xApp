@@ -9,12 +9,12 @@ xApp是基于[WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJa
 ```  
 ```javascript
 if(xApp.isInApp()) { // 在APP Webview中打开
-   $(document).on('click','.goodslink',function(){
+   $(document).on('click', '.goodslink', function() {
       var gid = $(this).attr('data-id');
       sendToApp(1, gid); // '1' 为商品详情页跳转指令, gid 为商品ID, 打开ID为 gid 的商品详情页
    });
 } else { // 非APP下
-   $(document).on('click','.goodslink',function(){
+   $(document).on('click', '.goodslink', function() {
       var href = $(this).attr('data-href');
       window.location.href = href; // 直接打开网页链接
    });
