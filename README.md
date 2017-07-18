@@ -12,8 +12,8 @@ if(xApp.isInApp()) {
    $(document).on('click','.goodslink',function(e){
       e.preventDefault();
       var gid = $(this).attr('data-id');
-      sendToApp(1, gid);
-   });
+      sendToApp(1, gid); // '1' 为商品详情页跳转指令, gid 为商品ID, 打开ID为 gid 的商品详情页
+   });
 }
 
 ```
