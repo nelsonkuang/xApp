@@ -2,7 +2,7 @@
 ```javascript
  xApp.sendToApp = function (type, value, callback)
 ```
- `type` 是要传给APP端的指令类型，`value` 是要传给APP端的值，`callback(response)` callback回调执行函数可以通过 `response` 响应参数来判断指令是否执行成功   
+ `type` 是要传给APP端的指令类型，`value` 是要传给APP端的值，`callback(response)` callback回调执行函数可以通过 `response` APP回传的响应参数来判断指令是否执行成功   
 
 ### 通用功能设计
 
