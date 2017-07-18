@@ -19,6 +19,13 @@
             }
             return null;
         },
+        isInApp: function () {
+            if(xApp.getAppVersion()) {
+                return true;
+            } else {
+                return false;
+            }
+        },
         setupWebViewJavascriptBridge: function (callback) { // webview端发起建立与App端的桥接
             if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
             if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
