@@ -1,6 +1,6 @@
 # xApp
 A Dead Simple Hybrid App Solution base on [WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)   
-xApp是基于[WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)而设计并封装好的一种非常简单易用的Hybrid App的解决方案。   
+xApp是基于[WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)而设计并封装好的一种非常简单易用的Hybrid App的解决方案。指令式的交互方式。   
 
 ## 使用方式
 1. APP与网页版共存的情况，参照[`sendToApp`](https://github.com/nelsonkuang/xApp/blob/master/sendToApp.md)的电商平台APP，如下：    
