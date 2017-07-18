@@ -50,7 +50,6 @@
         xApp.setupWebViewJavascriptBridge(function (bridge) {
             bridge.registerHandler('WebviewBridgeReady', function (data, responseCallback) { // [需APP开发人员定义好支持接口]
                 xApp.dataFromApp = xApp.ENV.isAndroid() ? JSON.parse(data) : data; // 要跟IOS及Android端沟通好能否直接输出json若否则需要进行转换。[这里要按需修改]
-
                 // var responseData = { 'type':'','value':'' }
                 // responseCallback(responseData); // 初始化完成后向APP端回传的响应数据，可选
                 // 若需要在h5动态设置header头部菜单，或者要设置fixed bottom固定底部菜单，需要在这时进行设置
