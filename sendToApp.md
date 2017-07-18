@@ -13,7 +13,7 @@
 912 | 通用页面 **跳转** | `pageId` | 跳转到页面ID为 `pageId` 的页面
 967 | 分享内容 **设置** | `{shareTitle:"分享标题",shareDesc:"分享描述",shareUrl:"链接",shareImg:"图片地址",shareRule:"分享规则0,1,2,3...",needLogin:"是否需要登录0/1"}` | 通过js设置分享内容
 917 | 分享 **调起** | | 
-910 | Webview **创建** | `link` | 创建新的Webview并打开指定链接 `link`
+910 | Webview **创建并打开** | `link` | 创建新的Webview并打开指定链接 `link`
 913 | Webview **关闭** | | 
 114 | APP原生普通提示框 **调起** | `msg` | 提示`msg`信息
 119 | APP原生警告提示框 **调起** | `msg` | 提示`msg`信息
