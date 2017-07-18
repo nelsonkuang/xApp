@@ -53,6 +53,7 @@
 
                 // var responseData = { 'type': 'value' }
                 // responseCallback(responseData); // 初始化完成后向APP端回传的响应数据，可选
+                // 若需要在h5动态设置header头部菜单或者fixed bottom固定底部菜单需要在这时进行设置
             });
             xApp.sendToApp = function (type, value, callback) { // 初始化Webview与App端交互的核心方法 [需APP开发人员定义好支持接口]
                 bridge.callHandler('SendDataToApp', { 'type': type, 'value': value }, function (response) {
