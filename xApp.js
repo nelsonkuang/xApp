@@ -44,12 +44,14 @@
         dataFromApp: null, // App共享给webview端的可用数据
         shareData: {}, // 分享到微信/QQ/..的数据设置,　格式{ 'type':'setShareData','value':{...}}
         ready: function (callback) { // 监听App端初始化webview是否完成，若考虑到所有的webview都是支持cookie，App端可以直接把dataFromApp数据写到cookie方便调用，就不需要执行此函数
-            var __getIdTimer = setInterval(function () {
-                if (xApp.dataFromApp) {
-                    callback(xApp.dataFromApp);
-                    clearInterval(__getIdTimer);
-                }
-            }, 10);
+            if (xApp.isInApp()) {
+                var __getIdTimer = setInterval(function () {
+                    if (xApp.dataFromApp) {
+                        callback(xApp.dataFromApp);
+                        clearInterval(__getIdTimer);
+                    }
+                }, 10);
+            }
         }
     };
     // 初始化
