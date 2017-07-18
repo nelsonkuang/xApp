@@ -21,6 +21,8 @@
 520 | APP原生成功提示框 **调起** | `msg` | 提示`msg`信息
 ... | ... | ... | ...
 
+   
+
 ### 实例：一个电商平台APP的sendToAppTypes设计   
 
 指令类型Type | 功能Function | 值value | 说明Description
