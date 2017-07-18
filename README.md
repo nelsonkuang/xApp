@@ -8,7 +8,7 @@ xApp是基于[WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJa
 <a href="/goods/450630" data-id="450630" class="goodslink">立刻参与</a>
 ```  
 ```javascript
-if(xApp.isInApp()) { // 
+if(xApp.isInApp()) { 
    $(document).on('click','.goodslink',function(e){
       e.preventDefault();
       var gid = $(this).attr('data-id');
@@ -16,4 +16,11 @@ if(xApp.isInApp()) { //
    });
 }
 
+```
+2. Webview中h5页面加载时需要使用APP端传过来的用户GID
+```javascript
+xApp.ready(function(data) {
+   var gId = data.gId;
+   // ...
+});
 ```
