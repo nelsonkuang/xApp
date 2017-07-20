@@ -69,8 +69,8 @@
             bridge.registerHandler('onUserShare', function (data) { // [需APP开发人员定义好支持接口] 执行分享回调函数
                 // 用户分享后，App端回传过来data格式如下：
                 // {code: 0,type:0}
-                // code 0-成功；-1-失败；－2-取消分享；
-                // type 0-分享到微信朋友圈；1-分享给微信好友；
+                // code '0'-成功；'-1'-失败；'-2'-取消分享；
+                // type '0'-分享到微信朋友圈；'1'-分享给微信好友；'2'-分享给QQ好友...
                 xApp.shareCallback(data); // 执行分享回调...
             });
             xApp.sendToApp = function (type, value, callback) { // 初始化Webview与App端交互的核心方法 [需APP开发人员定义好支持接口]
