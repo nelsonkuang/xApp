@@ -66,7 +66,7 @@
                 // 若需要在h5动态设置header头部菜单，或者要设置fixed bottom固定底部菜单，需要在这时进行设置
                 // 比如，要设计头部菜单有返回、关闭和分享按钮，可以这样传参数 var responseData = [{ 'type':'setHeaderMenus','value':['back','close','share']}];
             });
-            bridge.registerHandler('onUserShare', function (data) { // [需APP开发人员定义好支持接口] 执行分享回调函数
+            bridge.registerHandler('OnUserShare', function (data) { // [需APP开发人员定义好支持接口] 执行分享回调函数
                 // 用户分享后，App端回传过来data格式如下：
                 // {code: 0,type:0}
                 // code '0'-成功；'-1'-失败；'-2'-取消分享；
