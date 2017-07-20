@@ -58,6 +58,7 @@
     // 初始化
     if (xApp.isInApp()) {
         xApp.setupWebViewJavascriptBridge(function (bridge) {
+            // APP -> H5
             bridge.registerHandler('WebviewBridgeReady', function (data, responseCallback) { // [需APP开发人员定义好支持接口]
                 xApp.dataFromApp = xApp.ENV.isAndroid() ? JSON.parse(data) : data; // 要跟IOS及Android端沟通好能否直接输出json若否则需要进行转换。[这里要按需修改]
                 var responseData = [];
@@ -73,6 +74,8 @@
                 // type '0'-分享到微信朋友圈；'1'-分享给微信好友；'2'-分享给QQ好友...
                 xApp.shareCallback(data); // 执行分享回调...
             });
+            // ...
+            // H5 -> APP
             xApp.sendToApp = function (type, value, callback) { // 初始化Webview与App端交互的核心方法 [需APP开发人员定义好支持接口]
                 bridge.callHandler('SendDataToApp', { 'type': type, 'value': value }, function (response) {
                     callback(response);
