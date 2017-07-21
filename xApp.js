@@ -12,7 +12,7 @@
             }
         },
         getAppVersion: function () { // 比如：APP输出到webview的userAgent里面的串带定义好的 yourAppName/1.1-debug 则调用方法xApp.getAppVersion('yourAppName') => '1.1-debug'
-            var reg = new RegExp('(^|\/)' + appName + '\/([\w-_\.]+)(\/|$)', 'i');
+            var reg = new RegExp('(^|\\s)' + appName + '\/([\\w-_\.]+)(\/|$)', 'i');
             var r = navigator.userAgent.match(reg);
             if (r != null) {
                 return r[2];
