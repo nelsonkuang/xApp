@@ -78,7 +78,7 @@
             // ...
             // H5 -> APP
             xApp.sendToApp = function (type, value, callback) { // 初始化Webview与App端交互的核心方法 [需APP开发人员定义好支持接口]
-                bridge.callHandler('SendDataToApp', { 'type': type, 'value': value }, function (response) {
+                bridge.callHandler('SendToApp', { 'type': type, 'value': value }, function (response) {
                     callback(response);
                 })
             }
